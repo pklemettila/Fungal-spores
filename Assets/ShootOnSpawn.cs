@@ -10,7 +10,8 @@ public class ShootOnSpawn : MonoBehaviour
     void Start()
     {
 		rb= GetComponent<Rigidbody2D> ();
-		rb.AddForce(transform.right * 1000 );
+			rb.AddForce(transform.right * 1000 );
+
 
 		
       
