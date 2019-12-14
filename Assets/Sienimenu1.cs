@@ -6,11 +6,10 @@ public class Sienimenu1 : MonoBehaviour
 {
 	
     public GameObject menusieni1;
-	public int mikasieni;
+	public int sieniValue = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -21,6 +20,6 @@ public class Sienimenu1 : MonoBehaviour
 	
 	void OnMouseDown() {
 		Debug.Log("Clicky");
-		SieniSpawn.sieniValue = 1;
+		SieniSpawn.sieniValue = sieniValue;
 	}
 }
