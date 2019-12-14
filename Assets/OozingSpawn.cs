@@ -10,11 +10,17 @@ public class OozingSpawn : MonoBehaviour
 	public GameObject Clone;
 	public GameObject Child;
 	
+	public float ChildIntervalMin = 15.0f;
+	public float ChildIntervalMax = 25.0f;
+	
+	public float CloneIntervalMin = 90.0f;
+	public float CloneIntervalMax = 120.0f;
+	
     // Start is called before the first frame update
     void Start()
     {
-        cloneTimer = Random.Range(15.0f, 20.0f);
-		childTimer = Random.Range(5.0f, 10.0f);
+        cloneTimer = Random.Range(CloneIntervalMin, CloneIntervalMax);
+		childTimer = Random.Range(ChildIntervalMin, ChildIntervalMax);
     }
 
     // Update is called once per frame
@@ -22,13 +28,13 @@ public class OozingSpawn : MonoBehaviour
     {
 		childTimer -= Time.deltaTime;
 		if (childTimer < 0 && Child != null) {
-			childTimer = Random.Range(5.0f, 10.0f);
+			childTimer = Random.Range(ChildIntervalMin, ChildIntervalMax);
 			Instantiate(Child, transform.position, transform.rotation);
 		}
 		
 		cloneTimer -= Time.deltaTime;
 		if (cloneTimer < 0 && Clone != null) {
-			cloneTimer = Random.Range(15.0f, 20.0f);
+			cloneTimer = Random.Range(CloneIntervalMin, CloneIntervalMax);
 			Instantiate(Clone, transform.position, transform.rotation);
 		}     
     }
