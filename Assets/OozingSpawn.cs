@@ -11,10 +11,10 @@ public class OozingSpawn : MonoBehaviour
 	public GameObject Child;
 	
 	public float ChildIntervalMin = 15.0f;
-	public float ChildIntervalMax = 25.0f;
+	public float ChildIntervalMax = 20.0f;
 	
-	public float CloneIntervalMin = 90.0f;
-	public float CloneIntervalMax = 120.0f;
+	public float CloneIntervalMin = 70.0f;
+	public float CloneIntervalMax = 100.0f;
 	
     // Start is called before the first frame update
     void Start()
