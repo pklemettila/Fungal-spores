@@ -8,7 +8,6 @@ public class OozingMovement : MonoBehaviour
 	float rand;
     float forceAmount;
 	
-	public float WorldWidth = 60.0f;
 	public float WorldHeight = 60.0f;
 	
     // Start is called before the first frame update
@@ -45,15 +44,11 @@ public class OozingMovement : MonoBehaviour
             forceAmount = Random.Range(-1.0f, 1.0f);
         }
 		
-		if (transform.position.x > WorldWidth) {
-			transform.position = new Vector3(WorldWidth, transform.position.y, 0);
-		} else if (transform.position.x < -WorldWidth) {
-			transform.position = new Vector3(-WorldWidth, transform.position.y, 0);
-		}
+
 		
 		if (transform.position.y > WorldHeight) {
 			transform.position = new Vector3(transform.position.x, WorldHeight, 0);
-		} else if (transform.position.y < -WorldWidth) {
+		} else if (transform.position.y < -WorldHeight) {
 			transform.position = new Vector3(transform.position.x, -WorldHeight, 0);
 		}
     }
